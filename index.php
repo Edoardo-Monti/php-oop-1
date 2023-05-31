@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/models/generi.php';
 require_once __DIR__ . '/models/movie.php';
-
+require_once __DIR__ . '/database/db.php';
 
 
 
@@ -23,3 +23,29 @@ echo $Movie2 -> titolo . ' ' .$Movie2 -> contenutiAggiunti(200) .'min.'. ' ' .$M
 
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>film</title>
+</head>
+<body>
+    
+<?php foreach( $arrayMovies as $elem ) { ?>
+
+    <h1><?php echo $elem->titolo?></h1>
+
+    <span><?php echo $elem->durata?></span>
+    <li><?php echo $elem->genere->genere1?></li>
+    <li><?php echo $elem->genere->genere2?></li>
+
+<?php } ?>
+
+
+
+</body>
+</html>
