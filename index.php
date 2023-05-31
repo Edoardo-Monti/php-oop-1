@@ -1,33 +1,10 @@
 <?php
 
-class Movie{
+require_once __DIR__ . '/models/generi.php';
+require_once __DIR__ . '/models/movie.php';
 
-    public $titolo;
-    public $durata;
-    public $genere;
 
-    //creazione dei valori delle nostre istanze
-    function __construct($titolo, $durata, $genere){
-        $this -> titolo = $titolo;
-        $this -> durata = $durata;
-        $this -> genere = $genere;
-    }
 
-    function contenutiAggiunti($durata){
-      return $this -> durata = $durata;
-    }
-}
-
-class Generi{
-    public $genere1;
-    public $genere2;
-
-    function __construct($genere1, $genere2){
-        $this -> genere1 = $genere1;
-        $this -> genere2 = $genere2;
-    }
-
-}
 
 //istanza 1
 $Movie1 = new Movie('John Wick', 120, new Generi('splatter', 'action'));
