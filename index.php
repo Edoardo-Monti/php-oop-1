@@ -36,6 +36,7 @@ $Movie2 = new Movie('Hulk', 180, 'fantasy');
 
 var_dump($Movie1, $Movie2);
 
+//cambio dato 
 $Movie1 -> contenutiAggiunti(200);
 var_dump($Movie1);
 
